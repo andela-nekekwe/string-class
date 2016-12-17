@@ -1,7 +1,9 @@
-const assert = require('assert');
-require('../src/string-class')
 
-describe('hasVowels',  () => {
+
+const assert = require('assert');
+require('../src/string-class');
+
+describe('hasVowels', () => {
   it('should return true if the string contains vowels', () => {
     assert.equal('hhgah'.hasVowels(), true);
   });
@@ -37,7 +39,7 @@ describe('isQuestion', () => {
 
 describe('words', () => {
   it('should return a list of the words in the string as an Array', () => {
-    assert.equal('This is Andela'. words(), ['This', 'is', 'Andela']);
+    assert.equal('This is Andela'.words(), ['This', 'is', 'Andela']);
   });
 });
 
@@ -49,7 +51,7 @@ describe('wordCount', () => {
 
 describe('toCurrency', () => {
   it('should return a currency representation of the string', () => {
-    assert.equal('11111.11'.toCurrency(), 11,111.11);
+    assert.equal('11111.11'.toCurrency(), 11, 111.11);
   });
 });
 
@@ -61,7 +63,7 @@ describe('fromCurrency', () => {
 
 describe('inverseCase', () => {
   it('should return each letter in the string as an inverse of its current case', () => {
-    assert.equal('Mr. Ben.'.inverseCase(), 'mR. bEN.')
+    assert.equal('Mr. Ben.'.inverseCase(), 'mR. bEN.');
   });
 });
 
@@ -93,7 +95,7 @@ describe('isDigit', () => {
 });
 
 describe('doubleCheck', () => {
-  it('should return true if a string contains doubole characters', () =>{
+  it('should return true if a string contains doubole characters', () => {
     assert.equal('aa, !!'.doubleCheck(), true);
   });
 });
