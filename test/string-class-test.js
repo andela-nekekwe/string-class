@@ -1,4 +1,5 @@
 const assert = require('assert');
+require('../src/string-class')
 
 describe('hasVowels',  () => {
   it('should return true if the string contains vowels', () => {
