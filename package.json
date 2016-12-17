@@ -1,0 +1,26 @@
+{
+  "name": "string-class",
+  "version": "1.0.0",
+  "description": "extends string class",
+  "main": "string-class.js",
+  "scripts": {
+    "start": "node string-class.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-nekekwe/string-class.git"
+  },
+  "author": "ngozi ekekwe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-nekekwe/string-class/issues"
+  },
+  "homepage": "https://github.com/andela-nekekwe/string-class#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.15",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
