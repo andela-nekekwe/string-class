@@ -1,10 +1,9 @@
+sudo: required
+language: node_js
+dist: trusty
 language: node_js
 node_js:
-  - "6"
-  - "6.1"
-  - "5.11"
-  - "0.6"
-  - "iojs"
+  - node
 before_install:
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
