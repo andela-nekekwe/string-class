@@ -6,19 +6,19 @@ const stringManipulator = {
 
   toUpper() {
     return this.replace(/[a-z]/g, found =>
-      String.fromCharCode(found.charCodeAt(0) - 32),
+      String.fromCharCode(found.charCodeAt(0) - 32)
     );
   },
 
   toLower() {
     return this.replace(/[A-Z]/g, found =>
-      String.fromCharCode(found.charCodeAt(0) + 32),
+      String.fromCharCode(found.charCodeAt(0) + 32)
     );
   },
 
   ucFirst() {
     return this.replace(/^[a-z]/, found =>
-    String.fromCharCode(found.charCodeAt(0) - 32),
+    String.fromCharCode(found.charCodeAt(0) - 32)
     );
   },
 
