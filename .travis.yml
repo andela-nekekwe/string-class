@@ -4,6 +4,7 @@ dist: trusty
 language: node_js
 node_js:
   - node
+script: npm run coverage
 before_install:
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
