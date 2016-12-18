@@ -1,5 +1,5 @@
-# String Class
 [![Build Status](https://travis-ci.org/andela-nekekwe/string-class.svg)](https://travis-ci.org/andela-nekekwe/string-class)
+# String Class
 JavaScript String class extension methods to support more string manipulation.
 
 ## Contributing
