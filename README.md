@@ -1,5 +1,5 @@
 # String Class
-
+[![Build Status](https://travis-ci.org/andela-nekekwe/string-class.svg)](https://travis-ci.org/andela-nekekwe/string-class)
 JavaScript String class extension methods to support more string manipulation.
 
 ## Contributing
@@ -9,3 +9,4 @@ JavaScript String class extension methods to support more string manipulation.
 1. Commit your changes: `git commit -m "did something"`
 1. Push to the remote branch: `git push origin new-feature`
 1. Open a pull request.
+

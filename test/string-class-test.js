@@ -1,5 +1,3 @@
-
-
 const assert = require('assert');
 require('../src/string-class');
 

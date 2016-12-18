@@ -23,7 +23,7 @@ const stringManipulator = {
   },
 
   isQuestion() {
-    return /[?]/i.test(this);
+    return /[?]$/i.test(this);
   },
 
   words() {
