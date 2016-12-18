@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-nekekwe/string-class.svg)](https://travis-ci.org/andela-nekekwe/string-class)
+[![Coverage Status](https://coveralls.io/repos/github/andela-nekekwe/string-class/badge.svg?branch=master)](https://coveralls.io/github/andela-nekekwe/string-class?branch=master)
 # String Class
 JavaScript String class extension methods to support more string manipulation.
 
