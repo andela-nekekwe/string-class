@@ -4,6 +4,8 @@ dist: trusty
 language: node_js
 node_js:
   - node
-script: npm run coverage
+
 after_script:
-  - node node_modules/codeclimate-test-reporter/bin/codeclimate < coverage/lcov.info
+  - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls.js
+  
+after_success: 'npm run coveralls'
