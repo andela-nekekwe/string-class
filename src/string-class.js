@@ -1,6 +1,4 @@
-'use strict';
-
-const stringManipulator = {
+let stringManipulator = {
 
   hasVowels() {
     return /[aeiou]/i.test(this);

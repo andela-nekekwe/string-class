@@ -2,7 +2,7 @@ body {
   background-color: white;
 }
 
-.intro-text  {
+.intro-text {
   display: block;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 1000;
@@ -11,8 +11,18 @@ body {
   text-align: center;
 }
 
+.customBtn {
+  align-self: center;
+  margin-left: 200px;
+  margin-top: 4px;
+}
+
 .customrow {
   margin-left: 450px;
   margin-right: 50px;
   margin-top: 100px;
+}
+
+.footerCustom {
+  background-color: #ee6e73;
 }
