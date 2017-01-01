@@ -35,7 +35,7 @@ const stringManipulator = {
   },
 
   wordCount() {
-    const count = 0;
+    let count = 0;
     const arr = this.words();
     arr.forEach((item, index) => {
       count += index;

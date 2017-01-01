@@ -4,7 +4,7 @@
   "description": "extends string class",
   "main": "string-class.js",
   "scripts": {
-    "start": "node src/string-class.js",
+    "start": "node string-class.js",
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha ./test/**/*.js",
     "coverage": "istanbul cover _mocha -- -R spec",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
