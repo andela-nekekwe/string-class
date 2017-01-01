@@ -33,26 +33,30 @@
     <div class="parallax"><img materialboxed class="responsive-img" src="./images/abstract-1869796_1280.jpg">
     </div>
   </div>
-  <div class="row">
+  <div class="row"  ng-controller="stringController">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea" placeholder="Enter Text" ng-model="query"></textarea>
+        <div class="input-field col s12 customLabel">
+          <i class="material-icons prefix">mode_edit</i>
+          <input id="textarea1" class="materialize-textarea" placeholder="Enter Text" ng-model="query">
         </div>
       </div>
+      <div class="col s4">
+           <p class="customP">{{formdata}}</p>
+        </div>
     </form>
-    <div class="input-field col s4 offset-s4 browser-default" ng-controller="stringController" ng-hide="">
+    
+    <div class="col s4 offset-s4 browser-default">
       <select ng-model="value" material-select watch>
         <option ng-repeat="value in choices">{{value}}</option>
     </select>
-      <div> <a class="waves-effect waves-light red btn" ng-click="submit()">Manipulate Text</a>
-        <p> {{formdata}}</p>
+      <div> <a class="waves-effect waves-light red btn customBtn" ng-click="submit()">Manipulate Text</a>
       </div>
     </div>
   </div>
   <footer class="page-footer footerCustom">
     <div class="container" style="text-align:center">
-      © 2017 Copyright Text
+      © 2017 Copyright Ngozi Ekekwe
     </div>
     </div>
   </footer>

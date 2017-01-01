@@ -13,8 +13,16 @@ body {
 
 .customBtn {
   align-self: center;
-  margin-left: 200px;
-  margin-top: 4px;
+  margin-left: 100px;
+}
+
+.customP {
+  margin-left: 40px;
+  margin-top:5px;
+}
+
+.customLabel {
+  margin-top:40px;
 }
 
 .customrow {

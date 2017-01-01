@@ -1,4 +1,4 @@
-let stringManipulator = {
+const stringManipulator = {
 
   hasVowels() {
     return /[aeiou]/i.test(this);
@@ -35,7 +35,7 @@ let stringManipulator = {
   },
 
   wordCount() {
-    let count = 0;
+    const count = 0;
     const arr = this.words();
     arr.forEach((item, index) => {
       count += index;
