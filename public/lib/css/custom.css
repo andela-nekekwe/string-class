@@ -16,6 +16,11 @@ body {
   margin-left: 100px;
 }
 
+.customBtns {
+  align-self: center;
+  margin-left: 300px;
+}
+
 .customP {
   margin-left: 40px;
   margin-top:5px;
