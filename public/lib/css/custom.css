@@ -12,8 +12,7 @@ body {
 }
 
 .customBtn {
-  align-self: center;
-  margin-left: 100px;
+    margin-left: 40%;
 }
 
 .customBtns {
@@ -21,9 +20,14 @@ body {
   margin-left: 300px;
 }
 
+.custom-results {
+  float: right !important;
+}
+
 .customP {
   margin-left: 40px;
   margin-top:5px;
+  text-transform: capitalize;
 }
 
 .customLabel {
@@ -38,4 +42,21 @@ body {
 
 .footerCustom {
   background-color: #ee6e73;
+}
+
+.custom-select {
+  margin-top: 39px;
+  float: right;
+} 
+
+@media only screen and (max-width: 768px) {
+  .intro-text {
+    font-size: 2em
+  }
+  .customBtns {
+    margin: 0 28%;
+  }
+  .customrow {
+    margin-left: 350px;
+  }
 }

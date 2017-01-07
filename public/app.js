@@ -7,6 +7,7 @@
       switch($scope.value) {
         case 'hasVowels' :
           $scope.formdata = $scope.query.hasVowels();
+          console.log($scope.formdata);
           break;
         case 'toUpper' :
           $scope.formdata = $scope.query.toUpper();
