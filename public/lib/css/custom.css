@@ -27,7 +27,7 @@ body {
 .customP {
   margin-left: 40px;
   margin-top:5px;
-  text-transform: capitalize;
+  font-size: 1.5em;
 }
 
 .customLabel {

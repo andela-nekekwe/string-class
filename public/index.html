@@ -7,7 +7,6 @@
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="./lib/css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="./lib/css/custom.css" />
-
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -26,43 +25,41 @@
   </nav>
   <div class="parallax-container">
     <div class="customrow">
-      <p class="intro-text">STRING MANIPULATOR</p>
+      <p class="intro-text" style="margin-bottom:0px">STRING MANIPULATOR</p>
       <a class="waves-effect waves-light red btn customBtns" href="About.html">LEARN MORE</a>
     </div>
     <div class="parallax"><img materialboxed class="responsive-img" src="./images/abstract-1869796_1280.jpg">
     </div>
   </div>
-  <div class="row"  ng-controller="stringController">
+  <div class="row" ng-controller="stringController">
     <div class="col s6">
       <form>
         <div class="row">
           <div class="input-field col s12 customLabel">
             <i class="material-icons prefix">mode_edit</i>
-            <input id="textarea1" class="materialize-textarea" placeholder="Enter Text" ng-model="query">
+            <input id="textarea1"  placeholder="Enter Text" ng-model="query">
           </div>
-        </div>
-        <div class="col s2 custom-results">
-          <p class="customP">{{formdata}}</p>
         </div>
       </form>
     </div>
-
-    <div class="col s4 custom-select">
-      <select ng-model="value" material-select watch>
+    <div class="col s3 custom-select">
+      <select ng-model="value" material-select>
         <option ng-repeat="value in choices">{{value}}</option>
       </select>
     </div>
-    <div><a class="waves-effect waves-light red btn customBtn" ng-click="submit()">Manipulate Text</a></div>
+    <div class="col s3 custom-results">
+      <p class="customP" style="margin-top:60px; margin-left:-10px;">
+        <i class="material-icons prefix">info_outline</i> {{formdata}}
+      </p>
+    </div>
+    <div><a class="waves-effect waves-light red btn customBtn" ng-click="submit()" style="margin-top:40px">Manipulate Text</a></div>
   </div>
-
-  
   <footer class="page-footer footerCustom">
     <div class="container" style="text-align:center">
       © 2017 Copyright Ngozi Ekekwe
     </div>
     </div>
   </footer>
-
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script type="text/javascript" src="./angular.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
