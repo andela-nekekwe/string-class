@@ -1,40 +1,35 @@
-'use strict'
 const stringManipulator = {
   /**
-   * hasVowels()
-   * returns true if the string contains vowels
-   * @returns {Boolean}
+   * hasVowels
+   * @return {Boolean} true if the string contains vowels else false
    */
   hasVowels() {
     return /[aeiou]/i.test(this);
   },
 
   /**
-   * toUpper()
-   * returns a string with all characters in upper case
-   * @returns {String}
+   * toUpper
+   * @return {String} a string with all characters in upper case
    */
   toUpper() {
-    return this.replace(/[a-z]/g, found =>
-      String.fromCharCode(found.charCodeAt(0) - 32)
+    return this.replace(/[a-z]/g, letter =>
+      String.fromCharCode(letter.charCodeAt(0) - 32)
     );
   },
 
   /**
-   * toLower()
-   * returns a string with all characters in lower case
-   * @returns {String}
+   * toLower
+   * @return {String} a string with all characters in lower case
    */
   toLower() {
-    return this.replace(/[A-Z]/g, found =>
-      String.fromCharCode(found.charCodeAt(0) + 32)
+    return this.replace(/[A-Z]/g, letter =>
+      String.fromCharCode(letter.charCodeAt(0) + 32)
     );
   },
 
   /**
-   * ucFirst()
-   * returns the first character in upper case
-   * @returns {String}
+   * ucFirst
+   * @return {String} the first character in upper case
    */
   ucFirst() {
     return this.replace(/^[a-z]/g, found =>
@@ -43,129 +38,108 @@ const stringManipulator = {
   },
 
   /**
-   * isQuestion()
-   * returns true if the string is a question
-   * @returns {Boolean}
+   * isQuestion
+   * @return {Boolean} true if the string is a question else false
    */
   isQuestion() {
-    return /[?]$/.test(this.removeSpace());
+    return /^[\w+ -.]+\?$/.test(this.trim());
   },
 
   /**
-   * removeSpace()
-   * removes white spaces at the beginning and end of a string
-   * @returns {String}
-   */
-  removeSpace() {
-    return this.replace(/^\s+|\s+$/g, '');
-  },
-
-  /**
-   * words()
-   * returns a list of the words in the string, as an Array
-   * @returns {Array}
+   * words
+   * @returns {Array} a list of the words in the string, as an Array
    */
   words() {
-    return this.replace(/[^\w\s+]/gi, ' ').split(/\s+/);
+    return this.match(/\w+/g);
   },
 
   /**
-   * wordCount()
-   * returns the number of words in the string 
-   * @returns {Number}
+   * wordCount
+   * @returns {Number} the number of words in the string
    */
   wordCount() {
-    const words = this.words();
-    return words.length;
+    return this.words().length;
   },
 
   /**
-   * toCurrency()
-   * returns a currency representation of the String 
-   * @returns {String}
+   * toCurrency
+   * @returns {String} a currency representation of the String
    */
   toCurrency() {
-    return this.replace(/(\d+)(?=(\d{3})+(?!\d))/g, '$1,');
+    return this.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   },
 
   /**
-   * fromCurrency()
-   * returns a number representation of the Currency String
-   * @returns {Number}
+   * fromCurrency
+   * @returns {Number} a number representation of the Currency String
    */
   fromCurrency() {
-    return parseFloat((this.replace(/,+/g, '')));
+    return +(this.replace(/,+/g, ''));
   },
 
   /**
-   * inverseCase()
-   * returns each letter in the string as an inverse of its current case
-   * @returns {String}
+   * inverseCase
+   * @returns {String} each letter in the string as an inverse of its current case
    */
   inverseCase() {
-    return this.replace(/\w/g, found =>
-    /[A-Z]/g.test(found) ? found.toLower() : found.toUpper()
+    return this.replace(/\w/g, letter =>
+    (/[A-Z]/g.test(letter) ? letter.toLower() : letter.toUpper())
     );
   },
 
   /**
-   * alternatingCase()
-   * returns the letters in alternating cases
-   * @returns {String}
+   * alternatingCase
+   * @returns {String} the letters in alternating cases
    */
   alternatingCase() {
     return this.replace(/\w/g, (found, index) =>
-    (index % 2 === 0) ? found.toLower() : found.toUpper()
+    ((index % 2 === 0) ? found.toLower() : found.toUpper())
     );
   },
 
   /**
-   * getMiddle()
-   * returns the character(s) in the middle of the string
-   * @returns {String}
+   * getMiddle
+   * @returns {String} the character(s) in the middle of the string
    */
   getMiddle() {
     const length = this.length;
     const middle = Math.floor(length / 2);
-    return (middle % 2 === 0) ? this[middle - 1] + this[middle] : this[middle];
+    return (length % 2 === 0) ? this[middle - 1] + this[middle] : this[middle];
   },
 
   /**
-   * numberWords()
-   * returns the numbers in words
-   * @returns {String}
+   * numberWords
+   * @returns {String} the numbers in words
    */
   numberWords() {
-    const words = {
-      0: 'zero',
-      1: 'one',
-      2: 'two',
-      3: 'three',
-      4: 'four',
-      5: 'five',
-      6: 'six',
-      7: 'seven',
-      8: 'eight',
-      9: 'nine'
-    };
-    return this.replace(/\d/g, (found, index) =>
-    (index === 0) ? words[found] : ` ${words[found]}`
+    const words = [
+      'zero',
+      'one',
+      'two',
+      'three',
+      'four',
+      'five',
+      'six',
+      'seven',
+      'eight',
+      'nine'
+    ];
+    return this.replace(/\d/g, (number, index) =>
+    ((index === 0) ? words[number] : ` ${words[number]}`)
     );
   },
 
   /**
-   * isDigit()
-   * returns true if the string is a digit(one number) 
-   * @returns {Boolean}
+   * isDigit
+   * @return {Boolean} true if the string is a digit(one number)
    */
   isDigit() {
     return /^[\d]$/.test(this);
   },
 
   /**
-   * doubleCheck()
-   * Returns true if a string contains double characters(including whitespace character)
-   * returns {Boolean}
+   * doubleCheck
+   * @return {Boolean} true if string contains double characters else false
    */
   doubleCheck() {
     return /(.)\1/.test(this);
