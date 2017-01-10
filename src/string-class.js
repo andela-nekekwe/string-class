@@ -37,7 +37,7 @@ const stringManipulator = {
    * @returns {String}
    */
   ucFirst() {
-    return this.replace(/^[a-z]/mg, found =>
+    return this.replace(/^[a-z]/g, found =>
     found.toUpper()
     );
   },
@@ -48,15 +48,15 @@ const stringManipulator = {
    * @returns {Boolean}
    */
   isQuestion() {
-    return /\?$/.test(this.removeSpace());
+    return /^[\w+ \.]+\?$/.test(this.trim());
   },
 
   /**
-   * removeSpace()
+   * trim()
    * removes white spaces at the beginning and end of a string
    * @returns {String}
    */
-  removeSpace() {
+  trim() {
     return this.replace(/^\s+|\s+$/g, '');
   },
 
@@ -66,7 +66,7 @@ const stringManipulator = {
    * @returns {Array}
    */
   words() {
-    return this.replace(/^\w\s+/gi, '').split(/\s+/);
+    return this.replace(/[^\w\s+]/gi, ' ').split(/\s+/);
   },
 
   /**
@@ -75,8 +75,8 @@ const stringManipulator = {
    * @returns {Number}
    */
   wordCount() {
-    const arr = this.words();
-    return arr.length;
+    const words = this.words();
+    return words.length;
   },
 
   /**

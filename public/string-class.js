@@ -66,7 +66,7 @@ const stringManipulator = {
    * @returns {Array}
    */
   words() {
-    return this.replace(/[^\w\s+]/gi, '').split(/\s+/);
+    return this.replace(/[^\w\s+]/gi, ' ').split(/\s+/);
   },
 
   /**
@@ -75,12 +75,8 @@ const stringManipulator = {
    * @returns {Number}
    */
   wordCount() {
-    let count = 0;
-    const arr = this.words();
-    arr.forEach((item, index) => {
-      count += index;
-    });
-    return count;
+    const words = this.words();
+    return words.length;
   },
 
   /**

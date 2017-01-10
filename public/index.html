@@ -14,10 +14,8 @@
 <body ng-app="stringClass">
   <nav>
     <div class="nav-wrapper">
+      
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">HOME</a></li>
-      </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="index.html">HOME</a></li>
       </ul>
@@ -48,13 +46,13 @@
       </select>
     </div>
     <div class="col s3 custom-results">
-      <p class="customP" style="margin-top:60px; margin-left:-10px;">
+      <p class="customP" style="margin-top:60px; margin-left:-10px; margin-bottom:10px">
         <i class="material-icons prefix">info_outline</i> {{formdata}}
       </p>
     </div>
-    <div><a class="waves-effect waves-light red btn customBtn" ng-click="submit()" style="margin-top:40px">Manipulate Text</a></div>
+    <div><a class="waves-effect waves-light red btn customBtn" ng-click="submit()" style="margin-top: 0px">Manipulate Text</a></div>
   </div>
-  <footer class="page-footer footerCustom">
+  <footer class="page-footer footerCustom" style="margin-top:50px">
     <div class="container" style="text-align:center">
       © 2017 Copyright Ngozi Ekekwe
     </div>
