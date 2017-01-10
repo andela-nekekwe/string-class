@@ -75,8 +75,12 @@ const stringManipulator = {
    * @returns {Number}
    */
   wordCount() {
+    let count = 0;
     const arr = this.words();
-    return arr.length;
+    arr.forEach((item, index) => {
+      count += index;
+    });
+    return count;
   },
 
   /**
