@@ -35,13 +35,13 @@
         <div class="row">
           <div class="input-field col s12 customLabel">
             <i class="material-icons prefix">mode_edit</i>
-            <input id="textarea1"  placeholder="Enter Text" ng-model="query">
+            <input id="textarea1"  placeholder="Enter Text" ng-model="query" ng-change="{{formdata = query[value]()}}">
           </div>
         </div>
       </form>
     </div>
     <div class="col s3 custom-select">
-      <select ng-model="value" material-select>
+      <select ng-model="value" material-select ng-selected="{{formdata = query[value]()}}"> 
         <option ng-repeat="value in choices">{{value}}</option>
       </select>
     </div>
@@ -50,7 +50,6 @@
         <i class="material-icons prefix">info_outline</i> {{formdata}}
       </p>
     </div>
-    <div><a class="waves-effect waves-light red btn customBtn" ng-click="submit()" style="margin-top: 0px">Manipulate Text</a></div>
   </div>
   <footer class="page-footer footerCustom" style="margin-top:50px">
     <div class="container" style="text-align:center">

@@ -1,14 +1,14 @@
 const assert = require('assert');
 require('../src/string-class');
 
+const testVariable = 'hhgah'
+
 describe('hasVowels', () => {
   it('should return true if the string contains vowels', () => {
-    assert.strictEqual('hhgah'.hasVowels(), true);
     assert.strictEqual('aagoh'.hasVowels(), true);
   });
 
   it('should return false if the string does not contain vowels', () => {
-    assert.strictEqual('hghghg'.hasVowels(), false);
     assert.strictEqual('hhppppp'.hasVowels(), false);
   });
 });
@@ -16,7 +16,7 @@ describe('hasVowels', () => {
 describe('toUpper', () => {
   it('should transform any lowercase characters to uppercase', () => {
     assert.strictEqual('anDela'.toUpper(), 'ANDELA');
-    assert.strictEqual('anDela fellow'.toUpper(), 'ANDELA FELLOW'); 
+    assert.strictEqual('anDela fellow'.toUpper(), 'ANDELA FELLOW');
   });
 });
 
