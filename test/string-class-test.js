@@ -1,24 +1,30 @@
 const assert = require('assert');
 require('../src/string-class');
 
+const testVariable = 'hhgah'
+
 describe('hasVowels', () => {
   it('should return true if the string contains vowels', () => {
-    assert.strictEqual('hhgah'.hasVowels(), true);
+    assert.strictEqual('aagoh'.hasVowels(), true);
   });
 
   it('should return false if the string does not contain vowels', () => {
-    assert.strictEqual('hghghg'.hasVowels(), false);
+    assert.strictEqual('hhppppp'.hasVowels(), false);
   });
 });
 
 describe('toUpper', () => {
   it('should transform any lowercase characters to uppercase', () => {
     assert.strictEqual('anDela'.toUpper(), 'ANDELA');
+    assert.strictEqual('anDela fellow'.toUpper(), 'ANDELA FELLOW');
   });
 });
 
 describe('toLower', () => {
   it('should transfrom all uppercase characters to lowercase', () => {
+    assert.strictEqual('andela'.toLower(), 'andela');
+  });
+  it('should transfrom all uppercase characters in a string to lowercase', () => {
     assert.strictEqual('anDELA'.toLower(), 'andela');
   });
 });
@@ -44,6 +50,7 @@ describe('words', () => {
 describe('wordCount', () => {
   it('should return the number of words in the string', () => {
     assert.strictEqual('This is Andela'.wordCount(), 3);
+    assert.strictEqual('Andela'.wordCount(), 1);
   });
 });
 
