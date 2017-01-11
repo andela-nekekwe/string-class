@@ -1,0 +1,62 @@
+body {
+  background-color: white;
+}
+
+.intro-text {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 1000;
+  font-size: 4em;
+  color: black;
+  text-align: center;
+}
+
+.customBtn {
+    margin-left: 40%;
+}
+
+.customBtns {
+  align-self: center;
+  margin-left: 300px;
+}
+
+.custom-results {
+  float: right !important;
+}
+
+.customP {
+  margin-left: 40px;
+  margin-top:5px;
+  font-size: 1.5em;
+}
+
+.customLabel {
+  margin-top:40px;
+}
+
+.customrow {
+  margin-left: 450px;
+  margin-right: 50px;
+  margin-top: 100px;
+}
+
+.footerCustom {
+  background-color: #ee6e73;
+}
+
+.custom-select {
+  margin-top: 39px;
+  float: right;
+} 
+
+@media only screen and (max-width: 768px) {
+  .intro-text {
+    font-size: 2em
+  }
+  .customBtns {
+    margin: 0 28%;
+  }
+  .customrow {
+    margin-left: 350px;
+  }
+}
