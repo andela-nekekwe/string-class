@@ -42,7 +42,7 @@ const stringManipulator = {
    * @return {Boolean} true if the string is a question else false
    */
   isQuestion() {
-    return /^[\w+ -.]+\?$/.test(this.trim());
+    return /^\w+[^?]*\?$/.test(this.trim());
   },
 
   /**
@@ -66,7 +66,10 @@ const stringManipulator = {
    * @returns {String} a currency representation of the String
    */
   toCurrency() {
-    return this.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    if (/[^\d.]/.test(this) || /\..*\./.test(this)) {
+      throw Error;
+    }
+    return Number(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
   },
 
   /**
