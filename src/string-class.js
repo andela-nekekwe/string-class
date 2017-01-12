@@ -42,7 +42,7 @@ const stringManipulator = {
    * @return {Boolean} true if the string is a question else false
    */
   isQuestion() {
-    return /^[\w+ -.]+\?$/.test(this.trim());
+    return /^[\w]+([. \w]+)?\?$/.test(this.trim());
   },
 
   /**

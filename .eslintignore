@@ -1,2 +1,7 @@
-public/
+public/lib/js/custom.js
+public/lib/js/materialize.js
+public/lib/js/materialize.min.js
+public/angular.js
+public/app.js
+public/string-class.js
 server.js
