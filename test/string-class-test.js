@@ -81,7 +81,7 @@ describe('fromCurrency', () => {
 });
 
 describe('inverseCase', () => {
-  it('should return each letter in the string as an inverse of its current case', () => {
+  it('should return the inverseCase for an input string', () => {
     assert.strictEqual('Mr. Ben.'.inverseCase(), 'mR. bEN.');
     assert.strictEqual('HELLO woRLD'.inverseCase(), 'hello WOrld');
   });
@@ -96,8 +96,8 @@ describe('alternatingCase', () => {
 describe('getMiddle', () => {
   it('should return the character(s) in the middle of the string', () => {
     assert.strictEqual('read'.getMiddle(), 'ea');
-    assert.strictEqual('reads'.getMiddle(), 'e');
-    assert.strictEqual('shallow hallow'.getMiddle(), 'w'); 
+    assert.strictEqual('reads'.getMiddle(), 'a');
+    assert.strictEqual('shallow hallow'.getMiddle(), 'w ');
   });
 });
 
