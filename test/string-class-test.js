@@ -39,7 +39,7 @@ describe('isQuestion', () => {
     assert.strictEqual('Andela ?'.isQuestion(), true);
   });
 
-  it('it should return false if the string is not a valid question', () => {
+  it('should return false if the string is not a valid question', () => {
     assert.strictEqual('Andela ? is TIA?'.isQuestion(), false);
     assert.strictEqual('Andela TIA'.isQuestion(), false);
   });
@@ -84,12 +84,14 @@ describe('inverseCase', () => {
   it('should return the inverseCase for an input string', () => {
     assert.strictEqual('Mr. Ben.'.inverseCase(), 'mR. bEN.');
     assert.strictEqual('HELLO woRLD'.inverseCase(), 'hello WOrld');
+    assert.strictEqual('HELLO 9999 you'.inverseCase(), 'hello 9999 YOU');
   });
 });
 
 describe('alternatingCase', () => {
   it('should return the letters in the alternating cases', () => {
     assert.strictEqual('Onomatopoeia'.alternatingCase(), 'oNoMaToPoEiA');
+    assert.strictEqual('ngozi 555'.alternatingCase(), 'nGoZi 555');
   });
 });
 
@@ -111,7 +113,7 @@ describe('isDigit', () => {
   it('should return true if the string is a digit', () => {
     assert.strictEqual('3'.isDigit(), true);
   });
-  it('should return false if the string is a digit', () => {
+  it('should return false if the string is not a digit', () => {
     assert.strictEqual('34'.isDigit(), false);
   });
 });
