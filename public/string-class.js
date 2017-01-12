@@ -67,7 +67,7 @@ const stringManipulator = {
    */
   toCurrency() {
     if (/[^\d.]/.test(this) || /\..*\./.test(this)) {
-      throw Error;
+      throw new TypeError('Invalid number');
     }
     return Number(this).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
   },
