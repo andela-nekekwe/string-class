@@ -7,28 +7,28 @@ describe('hasVowels', () => {
     assert.strictEqual('Ngozi Rose'.hasVowels(), true);
   });
 
-  it('should return false if the string does not contain vowels', () => {
+  it('should return false if the string has no vowel', () => {
     assert.strictEqual('hhppppp'.hasVowels(), false);
     assert.strictEqual('yyhyhy fff'.hasVowels(), false);
   });
 });
 
 describe('toUpper', () => {
-  it('should transform any lowercase character to uppercase', () => {
+  it('should transform  lowercase characters to uppercase', () => {
     assert.strictEqual('anDela'.toUpper(), 'ANDELA');
     assert.strictEqual('ANDELA'.toUpper(), 'ANDELA');
   });
 });
 
 describe('toLower', () => {
-  it('should transform all uppercase characters to lowercase', () => {
+  it('should transform uppercase characters to lowercase', () => {
     assert.strictEqual('ANDELA'.toLower(), 'andela');
     assert.strictEqual('ANDELA M55'.toLower(), 'andela m55');
   });
 });
 
 describe('ucFirst', () => {
-  it('Should return string with first character in uppercase', () => {
+  it('Should transform the first character to uppercase', () => {
     assert.strictEqual('aNDELA'.ucFirst(), 'ANDELA');
     assert.strictEqual('Andela m55'.ucFirst(), 'Andela m55');
   });
