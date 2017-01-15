@@ -1,2 +1,11 @@
-public/
+public/lib/js/custom.js
+public/lib/js/materialize.js
+public/lib/js/materialize.min.js
+public/angular.js
+public/app.js
+public/string-class.js
+public/bundle.js
+public/bundle.map
 server.js
+gulpfile.js
+webpack.config.js
