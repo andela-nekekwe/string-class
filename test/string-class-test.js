@@ -1,3 +1,5 @@
+/*eslint import/no-unresolved: 2*/
+
 const assert = require('assert');
 const chai = require('chai');
 require('../src/string-class');
