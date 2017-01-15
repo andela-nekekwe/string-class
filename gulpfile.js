@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 2*/
 
 const gulp = require('gulp');
 const webpack = require('webpack-stream');
