@@ -1,3 +1,4 @@
+/* eslint import/no-unresolved: 2*/
 const path = require('path');
 const webpack = require('webpack');
 
@@ -7,7 +8,6 @@ module.exports = {
     loaders: [{
       loader: 'babel-loader',
       test: /\.json$/,
-      loader: 'json',
       query: {
         presets: 'es2015',
       },
