@@ -1,4 +1,5 @@
-/* eslint import/no-unresolved: 2*/
+/* eslint-disable import/no-unresolved */
+
 const chai = require('chai');
 
 const assert = chai.assert;
