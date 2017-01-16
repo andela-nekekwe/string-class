@@ -1,13 +1,12 @@
 /* eslint import/no-unresolved: 2*/
-const assert = require('assert');
 const chai = require('chai');
-require('../src/string-class');
 
-const should = chai.should();
+const assert = chai.assert;
+require('../src/string-class');
 
 describe('hasVowels', () => {
   it('should return a boolean', () => {
-    'hello'.hasVowels().should.be.a('boolean');
+    assert.isBoolean('hello'.hasVowels());
   });
 
   it('should return true if the string contains vowels', () => {
@@ -23,8 +22,9 @@ describe('hasVowels', () => {
 
 describe('toUpper', () => {
   it('should return a string', () => {
-    'hello'.toUpper().should.be.a('String');
+    assert.isString('hello'.toUpper());
   });
+
   it('should transform  lowercase characters to uppercase', () => {
     assert.strictEqual('anDela'.toUpper(), 'ANDELA');
     assert.strictEqual('ANDELA'.toUpper(), 'ANDELA');
@@ -33,7 +33,7 @@ describe('toUpper', () => {
 
 describe('toLower', () => {
   it('should return a string', () => {
-    'hello'.toLower().should.be.a('String');
+    assert.isString('hello'.toLower());
   });
 
   it('should transform uppercase characters to lowercase', () => {
@@ -44,7 +44,7 @@ describe('toLower', () => {
 
 describe('ucFirst', () => {
   it('should return a string', () => {
-    'hello'.ucFirst().should.be.a('String');
+    assert.isString('hello'.ucFirst());
   });
 
   it('Should transform the first character to uppercase', () => {
@@ -55,7 +55,7 @@ describe('ucFirst', () => {
 
 describe('isQuestion', () => {
   it('should return a boolean', () => {
-    'hello'.isQuestion().should.be.a('boolean');
+    assert.isBoolean('hello'.isQuestion());
   });
 
   it('should return true if the string is a question', () => {
@@ -70,7 +70,7 @@ describe('isQuestion', () => {
 
 describe('words', () => {
   it('should return an array', () => {
-    'hello'.words().should.be.a('array');
+    assert.isArray('hello'.words());
   });
 
   it('should return a list of the words in the string as an Array', () => {
@@ -80,7 +80,7 @@ describe('words', () => {
 
 describe('wordCount', () => {
   it('should return a number', () => {
-    'hello'.wordCount().should.be.a('number');
+    assert.isNumber('hello'.wordCount());
   });
 
   it('should return the number of words in the string', () => {
@@ -92,7 +92,7 @@ describe('wordCount', () => {
 
 describe('toCurrency', () => {
   it('should return a String', () => {
-    '123456.789'.toCurrency().should.be.a('String');
+    assert.isString('123456.789'.toCurrency());
   });
 
   it('should return a currency representation of the string', () => {
@@ -110,7 +110,7 @@ describe('toCurrency', () => {
 
 describe('fromCurrency', () => {
   it('should return a Number', () => {
-    '1,111.11'.fromCurrency().should.be.a('Number');
+    assert.isNumber('1,111.11'.fromCurrency());
   });
 
   it('should return a number representation of the currency', () => {
@@ -121,7 +121,7 @@ describe('fromCurrency', () => {
 
 describe('inverseCase', () => {
   it('should return a String', () => {
-    'Mr. Ben.'.inverseCase().should.be.a('String');
+    assert.isString('Mr. Ben.'.inverseCase());
   });
 
   it('should return the inverseCase for an input string', () => {
@@ -133,7 +133,7 @@ describe('inverseCase', () => {
 
 describe('alternatingCase', () => {
   it('should return a String', () => {
-    'Onomatopoeia'.alternatingCase().should.be.a('String');
+    assert.isString('Onomatopoeia'.alternatingCase());
   });
 
   it('should return the letters in the alternating cases', () => {
@@ -144,7 +144,7 @@ describe('alternatingCase', () => {
 
 describe('getMiddle', () => {
   it('should return a String', () => {
-    'read'.getMiddle().should.be.a('String');
+    assert.isString('read'.getMiddle());
   });
 
   it('should return the character(s) in the middle of the string', () => {
@@ -156,7 +156,7 @@ describe('getMiddle', () => {
 
 describe('numberWords', () => {
   it('should return a String', () => {
-    '325'.numberWords().should.be.a('String');
+    assert.isString('325'.numberWords());
   });
 
   it('should return the numbers in words', () => {
@@ -166,7 +166,7 @@ describe('numberWords', () => {
 
 describe('isDigit', () => {
   it('should return a boolean', () => {
-    '3'.isDigit().should.be.a('boolean');
+    assert.isBoolean('3'.isDigit());
   });
 
   it('should return true if the string is a digit', () => {
@@ -180,7 +180,7 @@ describe('isDigit', () => {
 
 describe('doubleCheck', () => {
   it('should return a boolean', () => {
-    'aa, !!'.doubleCheck().should.be.a('boolean');
+    assert.isBoolean('aa, !!'.doubleCheck());
   });
 
   it('should return true if it contains double characters', () => {
