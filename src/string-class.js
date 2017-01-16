@@ -82,7 +82,7 @@ const stringManipulator = {
 
   /**
    * inverseCase
-   * @returns {String} each letter in the string as an inverse of its current case
+   * @returns {String} a string with the case of every letter inverted
    */
   inverseCase() {
     return this.replace(/\w/g, letter =>
