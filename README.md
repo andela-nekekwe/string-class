@@ -51,9 +51,10 @@ JavaScript String class extension methods to support more string manipulation.
 ## Limitations
 This is not a standalone class, it is an extention of the default JavaScript String class
 
-## Usage
-The app can be accessed by cliking on [button](https://string-class.herokuapp.com/index.html)
-
+## How to use the string class
+- To use, clone or download file for this repository
+- change working directory to string-class then run ```npm install ``` to install dependencies
+- Run ```npm test ``` to see test results and available methods
 
 ## Contributing
 1. Fork this repositry to your account.
