@@ -51,7 +51,7 @@ JavaScript String class extension methods to support more string manipulation.
 ## Limitations
 This is not a standalone class, it is an extention of the default JavaScript String class
 
-## Useage
+## Usage
 The app can be accessed by cliking on [button](https://string-class.herokuapp.com/index.html)
 
 
